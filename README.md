@@ -1,4 +1,4 @@
-﻿## 流程情境
+## 流程情境
 
 **此專案包含以下物件 :**
 
@@ -25,7 +25,7 @@
 > CurrentSts | int | 目前所在過程
 > Bookmark | string | 流程註記
 
-## Building the Extension Bundles
+
 
 >`過程` IStep.cs 
 
@@ -78,12 +78,12 @@
 **使用範例 :**
 
 > 1.於 `global.asax` 建立關腳本
-> 
->	     //初始化相關腳本
+> ```
+>	   //初始化相關腳本
 >				
 >      IStep ConcreteA  = new ConcreteStepA();
->	     IStep ConcreteB  = new ConcreteStepB();
->	     IStep ConcreteC  = new ConcreteStepC();
+>	   IStep ConcreteB  = new ConcreteStepB();
+>	   IStep ConcreteC  = new ConcreteStepC();
 >
 >      CallerFlow AFlow = new CallerFlow();
 >            
@@ -92,12 +92,12 @@
 >      AFlow.Add(3,ConcreteC);
 >
 >
->	     FlowManager.Add("AFlow", callerFlow);           
+>	   FlowManager.Add("AFlow", callerFlow);           
 >
->
+>```
 
-> 2.於 `ILog.cs` 叫用方法
-> 
+>2.於 `ILog.cs` 叫用方法
+> ```
 >	//初始化相關腳本
 >
 >	Ilog log = new ConcreteLog();
@@ -105,11 +105,11 @@
 >	log.Bookmark = "AFlow"
 >
 >
-> //執行下個階段
-> log.Next();
+>  //執行下個階段
+>  log.Next();
 >
 >
->	//執行上個階段
->	log.Prev();
->           
+>  //執行上個階段
+>  log.Prev();
+>```           
 
