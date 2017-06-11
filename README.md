@@ -11,7 +11,7 @@
 
 **關係圖如下 :** 
 
-![](../../images/relations.PNG)
+![](../master/images/relations.PNG)
 
 **Schema如下 :**
 > `紀錄資訊` ILog.cs 
