@@ -81,15 +81,15 @@
 > ```
 >	   //初始化相關腳本
 >				
->      IStep ConcreteA  = new ConcreteStepA();
+>    IStep ConcreteA  = new ConcreteStepA();
 >	   IStep ConcreteB  = new ConcreteStepB();
 >	   IStep ConcreteC  = new ConcreteStepC();
 >
->      CallerFlow AFlow = new CallerFlow();
+>    CallerFlow AFlow = new CallerFlow();
 >            
->      AFlow.Add(1,ConcreteA);
->      AFlow.Add(2,ConcreteB);
->      AFlow.Add(3,ConcreteC);
+>    AFlow.Add(1,ConcreteA);
+>    AFlow.Add(2,ConcreteB);
+>    AFlow.Add(3,ConcreteC);
 >
 >
 >	   FlowManager.Add("AFlow", callerFlow);           
@@ -98,11 +98,12 @@
 
 >2.於 `ILog.cs` 叫用方法
 > ```
->	//初始化相關腳本
+>	//初始化紀錄資訊
 >
 >	Ilog log = new ConcreteLog();
->	log.nextSts = 2
->	log.Bookmark = "AFlow"
+>	log.nextSts = 2         //宣告準備執行的下一個過程
+> log.prevSts = 1         //宣告準備執行的上一個過程
+>	log.Bookmark = "AFlow"  //宣告流程
 >
 >
 >  //執行下個階段
