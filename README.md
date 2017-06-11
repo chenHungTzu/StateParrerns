@@ -106,11 +106,11 @@
 >	log.Bookmark = "AFlow"  //宣告流程
 >
 >
->  //執行下個階段
->  log.Next();
+> //執行下個階段
+> log.Next();
 >
 >
->  //執行上個階段
->  log.Prev();
+> //執行上個階段
+> log.Prev();
 >```           
 
