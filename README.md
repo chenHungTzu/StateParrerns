@@ -82,8 +82,8 @@
 >	   //初始化相關腳本
 >				
 >    IStep ConcreteA  = new ConcreteStepA();
->	   IStep ConcreteB  = new ConcreteStepB();
->	   IStep ConcreteC  = new ConcreteStepC();
+>	 IStep ConcreteB  = new ConcreteStepB();
+>	 IStep ConcreteC  = new ConcreteStepC();
 >
 >    CallerFlow AFlow = new CallerFlow();
 >            
@@ -92,7 +92,7 @@
 >    AFlow.Add(3,ConcreteC);
 >
 >
->	   FlowManager.Add("AFlow", callerFlow);           
+>	FlowManager.Add("AFlow", callerFlow);           
 >
 >```
 
@@ -102,15 +102,15 @@
 >
 >	Ilog log = new ConcreteLog();
 >	log.nextSts = 2         //宣告準備執行的下一個過程
-> log.prevSts = 1         //宣告準備執行的上一個過程
+>   log.prevSts = 1         //宣告準備執行的上一個過程
 >	log.Bookmark = "AFlow"  //宣告流程
 >
 >
-> //執行下個階段
-> log.Next();
+>   //執行下個階段
+>   log.Next();
 >
 >
-> //執行上個階段
-> log.Prev();
+>   //執行上個階段
+>   log.Prev();
 >```           
 
