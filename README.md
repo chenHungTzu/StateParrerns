@@ -95,7 +95,7 @@
 >	     FlowManager.Add("AFlow", callerFlow);           
 >
 >
->
+
 > 2.於 `ILog.cs` 叫用方法
 > 
 >	//初始化相關腳本
@@ -112,4 +112,4 @@
 >	//執行上個階段
 >	log.Prev();
 >           
->
+
