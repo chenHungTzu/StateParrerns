@@ -5,16 +5,16 @@
  * FlowManager.cs
  * IFlow.cs
  * IStep.cs
- * [ILog.cs][1]
-  
+ * ILog.cs
+ 
+ 
 
 **關係圖如下 :** 
 
-![](/images/relations.png)
+![](../blob/images/relations.png)
 
 **Schema如下 :**
-
-> [1]:`紀錄資訊` ILog.cs 
+> `紀錄資訊` ILog.cs 
 
 
 > 欄位 | 型態 | 說明
@@ -25,7 +25,7 @@
 > CurrentSts | int | 目前所在過程
 > Bookmark | string | 流程註記
 
-
+## Building the Extension Bundles
 
 >`過程` IStep.cs 
 
