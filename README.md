@@ -81,21 +81,21 @@
 > 
 >	     //初始化相關腳本
 >				
->            IStep ConcreteA  = new ConcreteStepA();
+>      IStep ConcreteA  = new ConcreteStepA();
 >	     IStep ConcreteB  = new ConcreteStepB();
 >	     IStep ConcreteC  = new ConcreteStepC();
 >
->            CallerFlow AFlow = new CallerFlow();
+>      CallerFlow AFlow = new CallerFlow();
 >            
->            AFlow.Add(1,ConcreteA);
->            AFlow.Add(2,ConcreteB);
->            AFlow.Add(3,ConcreteC);
+>      AFlow.Add(1,ConcreteA);
+>      AFlow.Add(2,ConcreteB);
+>      AFlow.Add(3,ConcreteC);
 >
 >
 >	     FlowManager.Add("AFlow", callerFlow);           
 >
 >
->```
+>
 > 2.於 `ILog.cs` 叫用方法
 > 
 >	//初始化相關腳本
@@ -105,11 +105,11 @@
 >	log.Bookmark = "AFlow"
 >
 >
->       //執行下個階段
->       log.Next();
+> //執行下個階段
+> log.Next();
 >
 >
 >	//執行上個階段
 >	log.Prev();
 >           
->```
+>
