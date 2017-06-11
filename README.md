@@ -1,6 +1,6 @@
-## ¬yµ{±¡¹Ò
+## æµç¨‹æƒ…å¢ƒ
 
-**¦¹±M®×¥]§t¥H¤Uª«¥ó :**
+**æ­¤å°ˆæ¡ˆåŒ…å«ä»¥ä¸‹ç‰©ä»¶ :**
 
  * FlowManager.cs
  * IFlow.cs
@@ -9,77 +9,77 @@
  
  
 
-**Ãö«Y¹Ï¦p¤U :** 
+**é—œä¿‚åœ–å¦‚ä¸‹ :** 
 
-![](../blob/images/relations.png)
+![](./blob/images/relations.png)
 
-**Schema¦p¤U :**
-> `¬ö¿ý¸ê°T` ILog.cs 
+**Schemaå¦‚ä¸‹ :**
+> `ç´€éŒ„è³‡è¨Š` ILog.cs 
 
 
-> Äæ¦ì | «¬ºA | »¡©ú
+> æ¬„ä½ | åž‹æ…‹ | èªªæ˜Ž
 > ------------ | ------------- | ----------
-> Sn | string | ¬ö¿ý½s¸¹
-> NextSts | int | ¤U¤@­Ó¹Lµ{
-> PrevSts | int | «e¤@­Ó¹Lµ{
-> CurrentSts | int | ¥Ø«e©Ò¦b¹Lµ{
-> Bookmark | string | ¬yµ{µù°O
+> Sn | string | ç´€éŒ„ç·¨è™Ÿ
+> NextSts | int | ä¸‹ä¸€å€‹éŽç¨‹
+> PrevSts | int | å‰ä¸€å€‹éŽç¨‹
+> CurrentSts | int | ç›®å‰æ‰€åœ¨éŽç¨‹
+> Bookmark | string | æµç¨‹è¨»è¨˜
 
 ## Building the Extension Bundles
 
->`¹Lµ{` IStep.cs 
+>`éŽç¨‹` IStep.cs 
 
 
-> Äæ¦ì | «¬ºA | »¡©ú
+> æ¬„ä½ | åž‹æ…‹ | èªªæ˜Ž
 > ------------ | ------------- | ----------
-> Key | string | ¹Lµ{µù°O
+> Key | string | éŽç¨‹è¨»è¨˜
 
 
-> ¤èªk:
->> ¸ÑÄÀ | ¤èªk | «¬ºA | »¡©ú
+> æ–¹æ³•:
+>> è§£é‡‹ | æ–¹æ³• | åž‹æ…‹ | èªªæ˜Ž
 >> ------------ | ------------- | ------------ | -----------
->> °õ¦æ¹Lµ{ |  Excute(ILog) | Boolean | °õ¦æ¸Ó¹Lµ{
+>> åŸ·è¡ŒéŽç¨‹ |  Excute(ILog) | Boolean | åŸ·è¡Œè©²éŽç¨‹
 
 
 
 
->`¬yµ{` IFlow.cs 
+>`æµç¨‹` IFlow.cs 
 
 
-> Äæ¦ì | «¬ºA | »¡©ú
+> æ¬„ä½ | åž‹æ…‹ | èªªæ˜Ž
 > ------------ | ------------- | ----------
-> _steps | IDictionary<int, IStep> | ¹Lµ{²M³æ
+> _steps | IDictionary<int, IStep> | éŽç¨‹æ¸…å–®
 
 
-> ¤èªk:
->> ¸ÑÄÀ | ¤èªk | «¬ºA | »¡©ú
+> æ–¹æ³•:
+>> è§£é‡‹ | æ–¹æ³• | åž‹æ…‹ | èªªæ˜Ž
 >> ------------ | ------------- | ------------ | -----------
->> ·s¼W¹Lµ{ |  AddMember(int, IStep) | void| (¹Lµ{µù°O,¹Lµ{)
->> §R°£¹Lµ{ |  RemoveMember(int) | void | (¹Lµ{µù°O)
->> ´À´«¹Lµ{ |  UpdateMember(int, IStep)| void | (¹Lµ{µù°O,¹Lµ{)
+>> æ–°å¢žéŽç¨‹ |  AddMember(int, IStep) | void| (éŽç¨‹è¨»è¨˜,éŽç¨‹)
+>> åˆªé™¤éŽç¨‹ |  RemoveMember(int) | void | (éŽç¨‹è¨»è¨˜)
+>> æ›¿æ›éŽç¨‹ |  UpdateMember(int, IStep)| void | (éŽç¨‹è¨»è¨˜,éŽç¨‹)
 
->`±±¨î¾¹` FlowManager.cs 
+>`æŽ§åˆ¶å™¨` FlowManager.cs 
 
 
->Äæ¦ì | «¬ºA | »¡©ú
+>æ¬„ä½ | åž‹æ…‹ | èªªæ˜Ž
 >------------ | ------------- | ----------
->_flow | IDictionary<String, IFlow> | ¬yµ{²M³æ
+>_flow | IDictionary<String, IFlow> | æµç¨‹æ¸…å–®
 
->¤èªk:
->> ¸ÑÄÀ | ¤èªk | «¬ºA | »¡©ú
+>æ–¹æ³•:
+>> è§£é‡‹ | æ–¹æ³• | åž‹æ…‹ | èªªæ˜Ž
 >> ------------ | ------------- | ------------ | ------------ 
->> ·s¼W¬yµ{ |  AddFlow(String , IFlow) | void | (¬yµ{µù°O,¬yµ{)
->> §R°£¬yµ{ |  RemoveFlow(String) | void|  (¬yµ{µù°O)
->> ´À´«¬yµ{ |  UpdateFlow(String, IFlow)| void| (¬yµ{µù°O,¬yµ{)
->> ²M°£©Ò¦³¬yµ{ |  ClearAllFlow() | void 
->> °õ¦æ¤U­Ó¶¥¬q |  Next(this ILog) | Boolean | (¬ö¿ý¸ê°T)
->> °õ¦æ¤W­Ó¶¥¬q |  Prev(this ILog) | Boolean | (¬ö¿ý¸ê°T)
+>> æ–°å¢žæµç¨‹ |  AddFlow(String , IFlow) | void | (æµç¨‹è¨»è¨˜,æµç¨‹)
+>> åˆªé™¤æµç¨‹ |  RemoveFlow(String) | void|  (æµç¨‹è¨»è¨˜)
+>> æ›¿æ›æµç¨‹ |  UpdateFlow(String, IFlow)| void| (æµç¨‹è¨»è¨˜,æµç¨‹)
+>> æ¸…é™¤æ‰€æœ‰æµç¨‹ |  ClearAllFlow() | void 
+>> åŸ·è¡Œä¸‹å€‹éšŽæ®µ |  Next(this ILog) | Boolean | (ç´€éŒ„è³‡è¨Š)
+>> åŸ·è¡Œä¸Šå€‹éšŽæ®µ |  Prev(this ILog) | Boolean | (ç´€éŒ„è³‡è¨Š)
 
-**¨Ï¥Î½d¨Ò :**
+**ä½¿ç”¨ç¯„ä¾‹ :**
 
-> 1.©ó `global.asax` «Ø¥ßÃö¸}¥»
+> 1.æ–¼ `global.asax` å»ºç«‹é—œè…³æœ¬
 >```C#
->			 //ªì©l¤Æ¬ÛÃö¸}¥»
+>			 //åˆå§‹åŒ–ç›¸é—œè…³æœ¬
 >				
 >            IStep ConcreteA  = new ConcreteStepA();
 >			 IStep ConcreteB  = new ConcreteStepB();
@@ -95,18 +95,18 @@
 >
 >
 >```
-> 2.©ó `ILog.cs` ¥s¥Î¤èªk
+> 2.æ–¼ `ILog.cs` å«ç”¨æ–¹æ³•
 > ```C#
->			 //ªì©l¤Æ¬ÛÃö¸}¥»
+>			 //åˆå§‹åŒ–ç›¸é—œè…³æœ¬
 >
 >			 Ilog log = new ConcreteLog();
 >			 log.nextSts = 2
 >			 log.Bookmark = "AFlow"
 >
->            //°õ¦æ¤U­Ó¶¥¬q
+>            //åŸ·è¡Œä¸‹å€‹éšŽæ®µ
 >            log.Next();
 >
->			 //°õ¦æ¤W­Ó¶¥¬q
+>			 //åŸ·è¡Œä¸Šå€‹éšŽæ®µ
 >			 log.Prev();
 >           
 >```
